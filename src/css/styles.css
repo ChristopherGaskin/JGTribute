@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    margin: 0;
+    line-height: 1.4rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Content for the page's header */
+
+header {
+    padding: .25rem 1rem 2rem;
+    background-color: #9edfe4;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Caveat', sans-serif;
+    color: rgb(247, 97, 16);
+    text-shadow: 1px 1px 2px black;
+}
+
+ul {
+    padding: 0;
+    margin: 2rem 0;
+    list-style: none;
+}
+
+li {
+    background-color: white;
+    list-style-type: none;
+    padding: .5rem 0;
+    margin: .25rem 0;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    display: block;
+}
+
+li a {
+    color:black;
+}
+
+li:hover,
+li:focus-within {
+    background:rgb(139, 242, 167);
+    cursor: pointer;
+}
+
+li:focus-within a {
+    outline: none;
+}
+
+ul li ul {
+    background:rgb(224, 145, 18);
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(28, 18, 224)
+}
+
+.header-img {
+    max-width: 100%;
+    margin: .5rem 0;
+}
