@@ -9,6 +9,9 @@ html {
 body {
     margin: 0;
     line-height: 1.4rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 p {
@@ -17,17 +20,33 @@ p {
 
 /* Content for the page's header */
 
-header {
+.main-header {
     padding: .25rem 1rem 2rem;
     background-color: #9edfe4;
     text-align: center;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: 'Caveat', sans-serif;
-    color: rgb(247, 97, 16);
-    text-shadow: 1px 1px 2px black;
+    color: rgb(241, 146, 20);
+    text-shadow: 3px 3px #020e1a;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Caveat', sans-serif;
+    color: rgb(33, 20, 2);
+    text-shadow: 2px 2px rgb(241, 146, 20);
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.main-nav {
+    text-shadow: rgb(0, 255, 251) 1px 0 10px;
 }
 
 ul {
@@ -48,12 +67,12 @@ li {
 }
 
 li a {
-    color:black;
+    color: black;
 }
 
 li:hover,
 li:focus-within {
-    background:rgb(139, 242, 167);
+    background: rgb(180, 233, 206);
     cursor: pointer;
 }
 
@@ -62,19 +81,18 @@ li:focus-within a {
 }
 
 ul li ul {
-    background:rgb(224, 145, 18);
+    background: rgb(224, 145, 18);
     visibility: hidden;
     opacity: 0;
     min-width: 5rem;
-    position
     transition: all 0.5s ease;
     margin-top: 1rem;
     left: 0;
     display: none;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
+ul li:hover>ul,
+ul li:focus-within>ul,
 ul li ul:hover,
 ul li ul:focus {
     visibility: visible;
@@ -87,7 +105,8 @@ ul li ul li {
     width: 100%;
 }
 
-a {
+a,
+.family {
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -103,4 +122,95 @@ a:hover {
 .header-img {
     max-width: 100%;
     margin: .5rem 0;
+}
+
+/* ------- Content for the homepage footer ----------- */
+
+footer {
+    border-top: 1px solid lightgrey;
+    margin-top: auto;
+}
+
+footer ul {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.name {
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-family: 'Caveat', sans-serif;
+}
+
+.name a {
+    text-transform: capitalize;
+}
+
+.name a:hover {
+    background: none;
+}
+
+.item1 {
+    order: 1;
+    padding-right: 1rem;
+    text-transform: uppercase;
+}
+
+.item1 a {
+    font-size: .85rem;
+}
+
+
+.item2,
+.item3,
+.item4 {
+    display: none;
+}
+
+/* ------- Content for the Celebration of Life Page ------------- */
+
+.celebration-header {
+    padding: 0;
+    background-color: #9edfe4;
+    text-align: center;
+}
+
+.celebration-div {
+    padding: 2%;
+    margin: auto
+}
+
+/* ---------- Content for the Ancestry Page -------------------- */
+
+.ancestry-h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.five-generations {
+    display: block;
+    padding: 0;
+    margin: 10px auto;
+    width: 60%;
+    border: 5px solid black;
+}
+
+/* ---------- Content for the Legacy Page -------------------- */
+
+.chris-heather-familypic,
+.sessions-family-picture,
+.phariss-family-picture {
+    display: block;
+    margin: 10px auto;
+    width: 75%;
+    padding: 10px 20px;
+    border: 3px solid black;
+    padding: 0;
+}
+
+.chris-heather-text,
+.sessions-family-text,
+.phariss-family-text {
+    text-align: center;
 }

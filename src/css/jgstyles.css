@@ -1,0 +1,475 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    margin: 0;
+    line-height: 1.4rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+
+/* Content for the page's header */
+
+header {
+    padding: .25rem 1rem 2rem;
+    background-color: #9ee4d2;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-family: 'Caveat', sans-serif;
+    color: rgb(247, 16, 74)
+}
+
+ul {
+    padding: 0;
+    margin: 2rem 0;
+}
+
+li {
+    background-color: white;
+    list-style-type: none;
+    padding: .5rem 0;
+    margin: .25rem 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(28, 18, 224)
+}
+
+.header-img {
+    max-width: 75%;
+    margin: .5rem 0;
+}
+
+
+/* Main content of the page */
+
+main, #main-skills {
+    padding: 1.5rem 1rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.portfolio-div {
+    margin-bottom: 2.5rem;
+}
+
+.portfolio, .skills {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+section {
+    padding-bottom: 1rem;
+}
+
+section p {
+    padding: 0 .5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+.skills {
+    margin: 3em 0 3em 0;
+}
+
+.css {
+    background-color: #9ee4d2;
+    border: 3px solid black;
+    padding: .5em;
+    margin: .5em;
+}
+
+.html {
+    background-color: #9ee4d2;
+    border: 3px solid black;
+    padding: .5em;
+    margin: .5em;
+}
+
+.canva {
+    background-color: #9ee4d2;
+    border: 3px solid black;
+    padding: .5em;
+    margin: .5em;
+}
+
+/* Content for the aside */
+
+.aside {
+    background-color: #F8F9FA;
+    padding: 2.5rem .5rem 3.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+aside p {
+    padding: 0 .3rem;
+}
+
+address {
+    display: block;
+}
+
+.phone,
+.email {
+    display: inline-block;
+    width: 100%;
+    padding: .3rem 0;
+    margin: 0 auto;
+    font-style: normal;
+    word-spacing: .5rem;
+    letter-spacing: .06rem;
+}
+
+
+/* Footer information */
+
+footer {
+    border-top: 1px solid lightgrey;
+}
+
+footer ul {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.name {
+    padding-left: 1rem;
+    margin-right: auto;
+    font-family: 'Caveat', sans-serif;
+}
+
+.name a {
+    text-transform: capitalize;
+}
+
+.item1 {
+    order: 1;
+    padding-right: 1rem;
+    text-transform: uppercase;
+}
+
+.item1 a {
+    font-size: .85rem;
+}
+
+.item2,
+.item3,
+.item4,
+.item5 {
+    display: none;
+}
+
+
+/* This is where the media queries begin */
+
+@media screen and (min-width: 768px) {
+
+    body {
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    /* Header media queries start here */
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 4rem;
+    }
+
+    h1 {
+        padding-top: 1.5rem;
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    h1,
+    nav {
+        flex-basis: 768px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 1.5rem 0 2.5rem;
+    }
+
+    li {
+        background-color: #F8F9FA;
+        padding: .25rem 1.25rem .5rem;
+    }
+
+    a {
+        font-size: 1.15rem;
+    }
+
+    .header-img,
+    header p {
+        flex: 1 300px;
+    }
+
+    .header-img {
+        order: 1;
+    }
+
+    header p {
+        padding-right: .5rem;
+        margin-top: .5rem;
+        text-align: start;
+    }
+
+    /* Media queries for the main content start here */
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .portfolio-div {
+        flex-basis: 100%;
+    }
+
+    .portfolio {
+        font-size: 1.1rem;
+    }
+
+    section {
+        flex: 1 50%;
+        padding: 0 .5rem 2rem;
+    }
+
+    section p {
+        padding: 0 2rem;
+        margin-top: .5rem;
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    main {
+        width: 95%;
+        padding-top: 2rem;
+        background-color: white;
+    }
+
+    /* Media queries for the aside */
+
+    .contact {
+        font-size: 1.1rem;
+    }
+
+    aside p {
+        max-width: 850px;
+        margin: 1.26rem auto;
+        padding: 1rem 8rem;
+    }
+
+    .phone,
+    .email {
+        padding: .5rem 0;
+        font-size: 1.15rem;
+    }
+
+    /* Media queries for the footer */
+
+    footer ul {
+        margin: 1.5rem 0;
+    }
+
+    .footer-list li {
+        background-color: white;
+    }
+
+    .item1 {
+        display: none;
+    }
+
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+        display: initial;
+    }
+
+    .item2 a,
+    .item3 a,
+    .item4 a,
+    .item5 a {
+        font-size: .9rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: #F8F9FA;
+    }
+
+    /* Meader media queries */
+
+    header {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    h1,
+    nav {
+        flex: 1 48%;
+    }
+
+    h1 {
+        text-align: start;
+        font-size: 1.6rem;
+        padding-top: 0;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    ul {
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    header p {
+        padding: 0 2.25rem 0 2rem;
+        font-size: 1.35rem;
+        flex-grow: 2;
+    }
+
+    .header-img {
+        flex-basis: 200px;
+        margin-right: 2rem;
+    }
+
+    /* Media queries for the main content */
+
+    main {
+        width: 95%;
+        padding-top: 2rem;
+        background-color: white;
+    }
+
+    .portfolio {
+        font-size: 1.1rem;
+    }
+
+    section {
+        flex-basis: 30%;
+    }
+
+    h2 {
+        margin-bottom: .5rem;
+        font-size: 1.3rem;
+    }
+
+    section p {
+        padding: 0 .75rem;
+        font-size: 1.15rem;
+    }
+
+    /* Aside media queries */
+
+    .aside {
+        padding-bottom: 5rem;
+    }
+
+    .contact {
+        font-size: 1rem;
+    }
+
+    aside p {
+        padding: .5rem 12rem 1rem;
+    }
+
+    .phone,
+    .email {
+        padding: .3rem 0;
+    }
+
+    /* Media queries for the footer */
+    
+    footer {
+        padding: 1rem 2rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-list li {
+        background-color: #F8F9FA;
+        ;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    header {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    header p {
+        margin-right: 3rem;
+    }
+
+    .header-img {
+        margin-left: 3rem;
+    }
+
+    .aside {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    footer {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
