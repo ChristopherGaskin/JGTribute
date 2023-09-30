@@ -96,9 +96,50 @@ h2 {
     font-size: 1.25rem;
 }
 
-/* Content for the aside */
+/* Content for the Life section */
 
-.aside {
+.extra {
+    display: none;
+}
+
+p {
+    line-height: 2em;
+    display: inline;
+}
+
+input[type="checkbox"] {
+    height: 2em;
+    display: block;
+    appearance: none;
+}
+
+label {
+    position: relative;
+    padding: 1em;
+    background-color: #f4e096;
+    color: black;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+label:before {
+    content: "Read More";
+    text-shadow: 2px 2px rgb(86, 199, 173);
+}
+
+input[type="checkbox"]:checked~label:before {
+    content: "Read Less";
+}
+
+.dots:has(~ input[type="checkbox"]:checked) {
+    display: none;
+}
+
+.extra:has(~ input[type="checkbox"]:checked) {
+    display: inline;
+}
+
+.life-section {
     background-color: #F8F9FA;
     padding: 2.5rem .5rem 3.5rem;
     margin: 0 auto;
@@ -111,12 +152,8 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-aside p {
+.life-section p {
     padding: 0 .3rem;
-}
-
-address {
-    display: block;
 }
 
 /* Footer information */
@@ -258,22 +295,16 @@ footer ul {
         background-color: white;
     }
 
-    /* Media queries for the aside */
+    /* Media queries for the Life section */
 
     .contact {
         font-size: 1.1rem;
     }
 
-    aside p {
-        max-width: 850px;
-        margin: 1.26rem auto;
-        padding: 1rem 8rem;
-    }
-
-    .phone,
-    .email {
-        padding: .5rem 0;
-        font-size: 1.15rem;
+    .life-section p {
+        max-width: auto;
+        margin: auto;
+        padding: 1rem 1rem;
     }
 
     /* Media queries for the footer */
@@ -377,27 +408,12 @@ footer ul {
         font-size: 1.15rem;
     }
 
-    /* Aside media queries */
-
-    .aside {
-        padding-bottom: 5rem;
-    }
-
     .contact {
         font-size: 1rem;
     }
 
-    aside p {
-        padding: .5rem 12rem 1rem;
-    }
-
-    .phone,
-    .email {
-        padding: .3rem 0;
-    }
-
     /* Media queries for the footer */
-    
+
     footer {
         padding: 1rem 2rem;
     }
@@ -425,11 +441,6 @@ footer ul {
 
     .header-img {
         margin-left: 3rem;
-    }
-
-    .aside {
-        padding-left: 7rem;
-        padding-right: 7rem;
     }
 
     footer {
